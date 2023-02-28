@@ -1,0 +1,9 @@
+consult("nom du fichier sans l'extension). #compiler
+
+working_directory(CWD,CWD). #voir dans quel directory on est 
+
+working_directory(_,"nouveau directory"). #changer de directory, mettre le nouveau directory entre ''
+
+tty_clear. #clear l'écran de swi prolog
+
+Pour voir les possibilités suivantes faire ; 
