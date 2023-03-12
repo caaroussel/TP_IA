@@ -51,7 +51,6 @@ main :-
 	% initialisations Pf, Pu et Q 
 
 	% lancement de Aetoile
-
 	initial_state(S0),
 	G0 is 0,
 	heuristique(S0,H0),
@@ -61,9 +60,7 @@ main :-
 	empty(Q),
 	insert([[F0,H0,G0],S0],Pf,Pf1),
 	insert([S0,[F0,H0,G0],nil,nil], Pu, Pu1),
-	aetoile(Pf1,Pu1,Q),
-	T is cputime,
-	writeln(T).
+	aetoile(Pf1,Pu1,Q).
 
 
 
@@ -153,3 +150,10 @@ affiche_solution(Q,[Actuel,Val,Pere,A]):-
 		writeln('Début')
 	).
 	
+/* RunTime test */
+
+test_time(Runtime) :-
+	get_time(Start),
+	main,
+	get_time(Stop),
+	Runtime is Stop-Start.
