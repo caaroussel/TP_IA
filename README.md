@@ -1,6 +1,6 @@
 ## Où trouver les comptes rendues de chaque TP
 
-Les comptes rendues sont dans les dossiers TP1 et TP2 
+Les comptes rendus sont dans les dossiers TP1 et TP2 
 
 ## Compilateur et ordinateur utilisés
 
