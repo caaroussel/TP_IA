@@ -105,6 +105,38 @@ seconde_diag(K,[E|D],[Ligne|M]) :-
 	seconde_diag(K1,D,M).
 
 
+/* Test unitaire des prédicats : diagonale, ligne et colonnes */
+
+test_unitaire_diag:-
+	M=[[a,b,c], [d,e,f], [g,h,i]],
+	T=[[a,b,c,d], [e,f,g,h], [i,j,k,l],[m,n,o,p]],
+	diagonale([a,e,i],M),
+	diagonale([c,e,g],M),
+	diagonale([a,f,k,p],T),
+	diagonale([d,g,j,m],T).
+
+test_unitaire_ligne:-
+	M=[[a,b,c], [d,e,f], [g,h,i]],
+	T=[[a,b,c,d], [e,f,g,h], [i,j,k,l],[m,n,o,p]],
+	ligne([a,b,c],M),
+	ligne([d,e,f],M),
+	ligne([g,h,i],M),
+	ligne([a,b,c,d],T),
+	ligne([e,f,g,h],T),
+	ligne([i,j,k,l],T),
+	ligne([m,n,o,p],T).
+
+test_unitaire_colonne:-
+	M=[[a,b,c], [d,e,f], [g,h,i]],
+	T=[[a,b,c,d], [e,f,g,h], [i,j,k,l],[m,n,o,p]],
+	colonne([a,d,g],M),
+	colonne([b,e,h],M),
+	colonne([c,f,i],M),
+	colonne([a,e,i,m],T),
+	colonne([b,f,j,n],T),
+	colonne([c,g,k,o],T),
+	colonne([d,h,l,p],T).
+
 	/*****************************
 	 DEFINITION D'UN ALIGNEMENT 
 	 POSSIBLE POUR UN JOUEUR DONNE

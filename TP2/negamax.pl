@@ -158,9 +158,6 @@ meilleur([H|T],Meilleur_Couple):-
 		Meilleur_Couple = M
 	).
 
-
-
-
 	/******************
   	PROGRAMME PRINCIPAL
   	*******************/
